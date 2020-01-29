@@ -23,9 +23,11 @@ public class Ontheractivity extends AppCompatActivity {
               EditText edittexturl=findViewById(R.id.editTextenterUrl);
               String url=edittexturl.getText().toString();
               if(url==""){
+                  Toast.makeText(getApplicationContex(), "enter url", Toast.LENGTH_SHORT).show();
 
               }
-                webview.loadUrl();
+              else {
+                webview.loadUrl(url);
             }
         });
     }
