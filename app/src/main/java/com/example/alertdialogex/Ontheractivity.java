@@ -21,7 +21,11 @@ public class Ontheractivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               EditText edittexturl=findViewById(R.id.editTextenterUrl);
-                webview.loadUrl(edittexturl.getText().toString());
+              String url=edittexturl.getText().toString();
+              if(url==""){
+
+              }
+                webview.loadUrl();
             }
         });
     }
